@@ -1,10 +1,24 @@
+"use client";
+
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
 
 const ContactSection = () => {
+  const { ref: containerRef, inView: containerInView } = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
+
   return (
-    <section className="contact" id="contact">
+    <section ref={containerRef} className="contact" id="contact">
       <div className="contact-content">
-        <div className="contact_title header-moves">
+        <div
+          className={
+            containerInView
+              ? "contact_title header-moves active"
+              : "contact_title header-moves"
+          }
+        >
           <h2>CONTACTO</h2>
         </div>
         <div className="contact-content-container">
@@ -40,7 +54,12 @@ const ContactSection = () => {
           <div className="contact-content-wrapper">
             <div className="contact-content_info3">
               <h4>Escríbenos por whatsapp</h4>
-              <Image src="/img/whatsapp.png" alt="whatsapp logo" />
+              <Image
+                src="/img/whatsapp.png"
+                alt="whatsapp logo"
+                width={500}
+                height={500}
+              />
               <span>Tel. (57) 315 38 30 711</span>
             </div>
           </div>

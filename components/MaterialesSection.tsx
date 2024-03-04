@@ -1,20 +1,42 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 const MaterialesSection = () => {
+  const [itemSelected, setItemSelected] = useState(1);
+
+  const { ref: containerRef, inView: containerInView } = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
+
   return (
-    <section className="materiales" id="materiales">
+    <section ref={containerRef} className="materiales" id="materiales">
       {/* <!--DESKTOP--> */}
       <div className="materiales-container-desktop">
         <div className="materiales_title-desktop">
-          <h2 className="materiales_title header-moves">MATERIALES</h2>
+          <h2
+            className={
+              containerInView
+                ? "materiales_title header-moves active"
+                : "materiales_title header-moves"
+            }
+          >
+            MATERIALES
+          </h2>
         </div>
         <div className="materiales-info-desktop">
           <div className="slider-desktop">
-            <input type="radio" name="slide" id="slide-1" checked />
+            <input type="radio" name="slide" id="slide-1" defaultChecked />
             <input type="radio" name="slide" id="slide-2" />
             <input type="radio" name="slide" id="slide-3" />
             <input type="radio" name="slide" id="slide-4" />
-            <div className="slider-content-desktop slide-1">
+            <div
+              style={itemSelected === 1 ? { opacity: "1" } : { opacity: "0" }}
+              className="slider-content-desktop slide-1"
+            >
               <h3>Drill Pipe</h3>
               <p>
                 La tubería de perforación <strong>Drill Pipe</strong> se compone
@@ -90,8 +112,15 @@ const MaterialesSection = () => {
             </div>
           </div>
           <div className="mat-img-desktop">
-            <label className="img-label" htmlFor="slide-1">
+            <label
+              onClick={() => setItemSelected(1)}
+              className="img-label"
+              htmlFor="slide-1"
+            >
               <Image
+                style={
+                  itemSelected === 1 ? { height: "250px" } : { height: "200px" }
+                }
                 tabIndex={0}
                 className="mat-img"
                 src="/img/drillpipe.png"
@@ -103,8 +132,15 @@ const MaterialesSection = () => {
                 <strong>DRILL PIPE</strong>
               </span>
             </label>
-            <label className="img-label" htmlFor="slide-2">
+            <label
+              onClick={() => setItemSelected(2)}
+              className="img-label"
+              htmlFor="slide-2"
+            >
               <Image
+                style={
+                  itemSelected === 2 ? { height: "250px" } : { height: "200px" }
+                }
                 tabIndex={0}
                 className="mat-img"
                 src="/img/linepipe_1.png"
@@ -116,8 +152,15 @@ const MaterialesSection = () => {
                 <strong>LINE PIPE</strong>
               </span>
             </label>
-            <label className="img-label" htmlFor="slide-3">
+            <label
+              onClick={() => setItemSelected(3)}
+              className="img-label"
+              htmlFor="slide-3"
+            >
               <Image
+                style={
+                  itemSelected === 3 ? { height: "250px" } : { height: "200px" }
+                }
                 tabIndex={0}
                 className="mat-img"
                 src="/img/barra_perforadora.png"
@@ -129,8 +172,15 @@ const MaterialesSection = () => {
                 <strong>BARRAS</strong>
               </span>
             </label>
-            <label className="img-label" htmlFor="slide-4">
+            <label
+              onClick={() => setItemSelected(4)}
+              className="img-label"
+              htmlFor="slide-4"
+            >
               <Image
+                style={
+                  itemSelected === 4 ? { height: "250px" } : { height: "200px" }
+                }
                 tabIndex={0}
                 className="mat-img"
                 src="/img/ejes_1.png"
@@ -148,9 +198,17 @@ const MaterialesSection = () => {
       {/* <!--MOBILE--> */}
       <div className="materiales-divider">
         <div className="materiales-container">
-          <h2 className="materiales_title header-moves">MATERIALES</h2>
+          <h2
+            className={
+              containerInView
+                ? "materiales_title header-moves active"
+                : "materiales_title header-moves"
+            }
+          >
+            MATERIALES
+          </h2>
           <div className="slider">
-            <input type="radio" name="slide" id="slide1" checked />
+            <input type="radio" name="slide" id="slide1" defaultChecked />
             <input type="radio" name="slide" id="slide2" />
             <input type="radio" name="slide" id="slide3" />
             <input type="radio" name="slide" id="slide4" />
@@ -229,16 +287,52 @@ const MaterialesSection = () => {
           </div>
         </div>
         <div className="dots" tabIndex={0}>
-          <label htmlFor="slide1" tabIndex={0}></label>
-          <label htmlFor="slide2" tabIndex={0}></label>
-          <label htmlFor="slide3" tabIndex={0}></label>
-          <label htmlFor="slide4" tabIndex={0}></label>
+          <label
+            style={
+              itemSelected === 1
+                ? { backgroundColor: "white" }
+                : { backgroundColor: "transparent" }
+            }
+            onClick={() => setItemSelected(1)}
+            htmlFor="slide1"
+            tabIndex={0}
+          ></label>
+          <label
+            style={
+              itemSelected === 2
+                ? { backgroundColor: "white" }
+                : { backgroundColor: "transparent" }
+            }
+            onClick={() => setItemSelected(2)}
+            htmlFor="slide2"
+            tabIndex={0}
+          ></label>
+          <label
+            style={
+              itemSelected === 3
+                ? { backgroundColor: "white" }
+                : { backgroundColor: "transparent" }
+            }
+            onClick={() => setItemSelected(3)}
+            htmlFor="slide3"
+            tabIndex={0}
+          ></label>
+          <label
+            style={
+              itemSelected === 4
+                ? { backgroundColor: "white" }
+                : { backgroundColor: "transparent" }
+            }
+            onClick={() => setItemSelected(4)}
+            htmlFor="slide4"
+            tabIndex={0}
+          ></label>
         </div>
       </div>
       <div className="wave2">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300">
           <path
-            fill-opacity="1"
+            fillOpacity="1"
             className="wave-svg"
             d="M0,160L120,170.7C240,181,480,203,720,213.3C960,224,1200,224,1320,224L1440,224L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
           ></path>
