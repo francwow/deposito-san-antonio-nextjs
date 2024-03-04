@@ -1921,6 +1921,17 @@ label a {
     opacity: 1;
     transition: opacity 0.1s ease-in;
   }
+
+  .modal-close {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    background: white;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
 }
 
 @media screen and (min-width: 1150px) {
