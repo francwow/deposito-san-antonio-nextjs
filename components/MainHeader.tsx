@@ -21,7 +21,7 @@ const MainHeader = () => {
           </li>
           <li>
             <a className="header_nav" href="#subastas">
-              Ofertas
+              Otros Productos
             </a>
           </li>
           <li>

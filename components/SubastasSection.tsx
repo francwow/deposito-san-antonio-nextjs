@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -85,17 +86,14 @@ const SubastasSection = () => {
           <div className="subastas-content-container">
             <div className="subastas-content-wrapper">
               <div className="subastas-hover">
-                {/* <h4>26 unidades disponibles</h4> */}
-                <button
-                  onClick={() => {
-                    setSubastasItem("Codos y Flanches");
-                    setModalActive(true);
-                  }}
-                  name="subastas-button"
+                {/* <h4>26 unidades disLinkes</h4> */}
+                <Link
+                  href={"https://api.whatsapp.com/send?phone=573153830711"}
+                  target="_blank"
                   className="subastas-button"
                 >
                   <span>Escríbenos</span>
-                </button>
+                </Link>
               </div>
               <Image
                 className="subastas_img"
@@ -108,17 +106,14 @@ const SubastasSection = () => {
             </div>
             <div className="subastas-content-wrapper">
               <div className="subastas-hover">
-                {/* <h4>14 unidades disponibles</h4> */}
-                <button
-                  onClick={() => {
-                    setSubastasItem("Centralizadores");
-                    setModalActive(true);
-                  }}
-                  name="subastas-button"
+                {/* <h4>14 unidades disLinkes</h4> */}
+                <Link
+                  href={"https://api.whatsapp.com/send?phone=573153830711"}
+                  target="_blank"
                   className="subastas-button"
                 >
                   <span>Escríbenos</span>
-                </button>
+                </Link>
               </div>
               <Image
                 className="subastas_img"
@@ -131,18 +126,15 @@ const SubastasSection = () => {
             </div>
             <div className="subastas-content-wrapper">
               <div className="subastas-hover">
-                {/* <h4>Aprox 1300 unidades disponibles</h4> */}
+                {/* <h4>Aprox 1300 unidLinkisponibles</h4> */}
                 {/* <span>Tamaños: 1&quot; 7/8, 2&quot;, 3&quot;</span> */}
-                <button
-                  onClick={() => {
-                    setSubastasItem("Espárragos");
-                    setModalActive(true);
-                  }}
-                  name="subastas-button"
+                <Link
+                  href={"https://api.whatsapp.com/send?phone=573153830711"}
+                  target="_blank"
                   className="subastas-button"
                 >
                   <span>Escríbenos</span>
-                </button>
+                </Link>
               </div>
               <Image
                 className="subastas_img"
@@ -155,17 +147,14 @@ const SubastasSection = () => {
             </div>
             <div className="subastas-content-wrapper">
               <div className="subastas-hover">
-                {/* <h4>3 unidades disponibles</h4> */}
-                <button
-                  onClick={() => {
-                    setSubastasItem("Válvulas");
-                    setModalActive(true);
-                  }}
-                  name="subastas-button"
+                {/* <h4>3 unidades dispLinks</h4> */}
+                <Link
+                  href={"https://api.whatsapp.com/send?phone=573153830711"}
+                  target="_blank"
                   className="subastas-button"
                 >
                   <span>Escríbenos</span>
-                </button>
+                </Link>
               </div>
               <Image
                 className="subastas_img"
@@ -178,16 +167,13 @@ const SubastasSection = () => {
             </div>
             <div className="subastas-content-wrapper">
               <div className="subastas-hover">
-                <button
-                  onClick={() => {
-                    setSubastasItem("Polipasto");
-                    setModalActive(true);
-                  }}
-                  name="subastas-button"
+                <Link
+                  href={"https://api.whatsapp.com/send?phone=573153830711"}
+                  target="_blank"
                   className="subastas-button"
                 >
                   <span>Escríbenos</span>
-                </button>
+                </Link>
               </div>
               <Image
                 className="subastas_img"
@@ -200,17 +186,14 @@ const SubastasSection = () => {
             </div>
             <div className="subastas-content-wrapper">
               <div className="subastas-hover">
-                {/* <h4>11 unidades disponibles</h4> */}
-                <button
-                  onClick={() => {
-                    setSubastasItem("Cabezal");
-                    setModalActive(true);
-                  }}
-                  name="subastas-button"
+                {/* <h4>11 unidades disLinkes</h4> */}
+                <Link
+                  href={"https://api.whatsapp.com/send?phone=573153830711"}
+                  target="_blank"
                   className="subastas-button"
                 >
                   <span>Escríbenos</span>
-                </button>
+                </Link>
               </div>
               <Image
                 className="subastas_img"
@@ -223,17 +206,14 @@ const SubastasSection = () => {
             </div>
             <div className="subastas-content-wrapper">
               <div className="subastas-hover">
-                {/* <h4>Aprox 3000 unidades disponibles</h4> */}
-                <button
-                  onClick={() => {
-                    setSubastasItem("Tuercas");
-                    setModalActive(true);
-                  }}
-                  name="subastas-button"
+                {/* <h4>Aprox 3000 unidLinkisponibles</h4> */}
+                <Link
+                  href={"https://api.whatsapp.com/send?phone=573153830711"}
+                  target="_blank"
                   className="subastas-button"
                 >
                   <span>Escríbenos</span>
-                </button>
+                </Link>
               </div>
               <Image
                 className="subastas_img"
@@ -246,16 +226,13 @@ const SubastasSection = () => {
             </div>
             <div className="subastas-content-wrapper">
               <div className="subastas-hover">
-                <button
-                  onClick={() => {
-                    setSubastasItem("Camisas Hidráulicas");
-                    setModalActive(true);
-                  }}
-                  name="subastas-button"
+                <Link
+                  href={"https://api.whatsapp.com/send?phone=573153830711"}
+                  target="_blank"
                   className="subastas-button"
                 >
                   <span>Escríbenos</span>
-                </button>
+                </Link>
               </div>
               <Image
                 className="subastas_img"
@@ -268,16 +245,13 @@ const SubastasSection = () => {
             </div>
             <div className="subastas-content-wrapper">
               <div className="subastas-hover">
-                <button
-                  onClick={() => {
-                    setSubastasItem("Bomba Centrífuga");
-                    setModalActive(true);
-                  }}
-                  name="subastas-button"
+                <Link
+                  href={"https://api.whatsapp.com/send?phone=573153830711"}
+                  target="_blank"
                   className="subastas-button"
                 >
                   <span>Escríbenos</span>
-                </button>
+                </Link>
               </div>
               <Image
                 className="subastas_img"

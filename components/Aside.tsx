@@ -3,7 +3,7 @@ import Image from "next/image";
 const Aside = () => {
   return (
     <aside className="whatsapp">
-      <a href="https://web.whatsapp.com/" target="_blank">
+      <a href={"https://wa.me/573153830711?"} target="_blank">
         <Image
           src="/img/whatsapp.png"
           alt="Whatsapp logo"

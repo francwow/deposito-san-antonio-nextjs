@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 
 const ContactSection = () => {
@@ -36,6 +37,14 @@ const ContactSection = () => {
               <span>Colombia-Bogotá</span>
               <span>Tel. (57) 315 38 30 711</span>
               <span>(57) 2 77 44 03</span>
+              <span>
+                <Link
+                  className="email underline"
+                  href={"mailto:tutasuarez43@hotmail.com"}
+                >
+                  tutasuarez43@hotmail.com
+                </Link>
+              </span>
             </div>
           </div>
           <div className="contact-content-wrapper">
