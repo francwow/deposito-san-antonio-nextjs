@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
+import ContactForm from "./ContactForm";
 
 const ContactSection = () => {
   const { ref: containerRef, inView: containerInView } = useInView({
@@ -49,15 +50,7 @@ const ContactSection = () => {
           </div>
           <div className="contact-content-wrapper">
             <div className="contact-content_info2">
-              <form className="contact_form">
-                <label htmlFor="empresa">Empresa</label>
-                <input type="text" id="empresa" name="user_empresa" />
-                <label htmlFor="email">Correo</label>
-                <input type="email" id="email" name="user_email" />
-                <label htmlFor="asunto">Asunto</label>
-                <textarea id="asunto" name="user_asunto"></textarea>
-                <button type="submit">Enviar</button>
-              </form>
+              <ContactForm />
             </div>
           </div>
           <div className="contact-content-wrapper">

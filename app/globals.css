@@ -108,6 +108,26 @@ main {
   background-color: rgb(31, 31, 32);
 }
 
+i.symbol {
+  font-family: var(
+    --font-family-symbols
+  ); /* Variable declared in local font configuration */
+  font-weight: normal;
+  font-style: normal;
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga";
+}
+
 /* Header ------------------------------------------------------------- */
 .main-header {
   font-family: myriad, Verdana, Geneva, Tahoma, sans-serif;
@@ -875,6 +895,61 @@ main {
   cursor: pointer;
 }
 
+.error-msg-wrapper {
+  margin-top: 20px;
+}
+
+.error-msg {
+  color: red;
+  font-family: var(--font-inter);
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.error-icon {
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.error-icon span {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.success-msg-wrapper {
+  margin-top: 20px;
+}
+
+.success-msg {
+  color: var(--dark-green);
+  font-family: var(--font-inter);
+  font-weight: 700;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.success-icon .symbol {
+  color: var(--dark-green);
+}
+
+.error-msg span {
+  font-size: 0.8rem;
+  color: white;
+}
+
 .whatsapp {
   display: flex;
   position: fixed;
@@ -1054,7 +1129,7 @@ main {
   .contact-content-wrapper {
     margin-bottom: 40px;
   }
-  .contact-content-wrapper span {
+  .contact-content_info1 span {
     font-size: 1.2em;
     margin: 0 0 10px;
   }
@@ -1226,7 +1301,7 @@ main {
   .contact-content-wrapper {
     margin-bottom: 50px;
   }
-  .contact-content-wrapper span {
+  .contact-content_info1 span {
     font-size: 1.3em;
     margin: 0 0 15px;
   }
@@ -1637,7 +1712,7 @@ main {
     margin-bottom: 50px;
     flex-basis: 30%;
   }
-  .contact-content-wrapper span {
+  .contact-content_info1 span {
     font-size: 1.3em;
     margin: 0 0 15px;
   }
@@ -1809,7 +1884,7 @@ main {
   .contact-content-wrapper {
     margin-bottom: 40px;
   }
-  .contact-content-wrapper span {
+  .contact-content_info1 span {
     font-size: 1.2em;
     margin: 0 0 10px;
   }
@@ -1850,6 +1925,11 @@ main {
   }
   .contact-logo {
     width: 200px;
+  }
+
+  .error-icon span {
+    margin: 0;
+    font-size: 1rem;
   }
 
   .subastas-form {
